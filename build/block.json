@@ -1,19 +1,75 @@
 {
-  "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "create-block/boilerplate",
-  "version": "0.1.0",
-  "title": "Boilerplate",
-  "category": "widgets",
-  "icon": "smiley",
-  "description": "Example block scaffolded with Create Block tool.",
-  "example": {},
+  "name": "block-course/team-members",
+  "title": "Team Members",
+  "category": "media",
+  "icon": "groups",
+  "description": "A team members grid",
+  "keywords": [
+    "Team",
+    "Members",
+    "Grid"
+  ],
   "supports": {
-    "html": false
+    "html": false,
+    "align": [
+      "wide"
+    ]
   },
-  "textdomain": "boilerplate",
+  "textdomain": "team-members",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
   "style": "file:./style-index.css",
-  "viewScript": "file:./view.js"
+  "viewScript": "file:./view.js",
+  "attributes": {
+    "columns": {
+      "type": "number",
+      "default": 2
+    }
+  },
+  "example": {
+    "attributes": {
+      "columns": 2
+    },
+    "innerBlocks": [
+      {
+        "name": "blocks-course/team-member",
+        "attributes": {
+          "name": "John Doe",
+          "bio": "Lorem ipsum dolor sit amet.",
+          "url": "https://picsum.photos/id/1012/300/200",
+          "socialLinks": [
+            {
+              "icon": "facebook"
+            },
+            {
+              "icon": "twitter"
+            },
+            {
+              "icon": "instagram"
+            }
+          ]
+        }
+      },
+      {
+        "name": "blocks-course/team-member",
+        "attributes": {
+          "name": "Jane Doe",
+          "bio": "Lorem ipsum dolor sit amet.",
+          "url": "https://picsum.photos/seed/picsum/300/200",
+          "socialLinks": [
+            {
+              "icon": "facebook"
+            },
+            {
+              "icon": "twitter"
+            },
+            {
+              "icon": "instagram"
+            }
+          ]
+        }
+      }
+    ]
+  }
 }
